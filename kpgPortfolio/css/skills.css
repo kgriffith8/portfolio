@@ -1,14 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  /* background-color: #292a2b; */
-}
-
+/* 
 .header {
   height: 35vh;
   background-image: linear-gradient(
@@ -45,7 +35,7 @@ body {
   position: absolute;
   top: 40px;
   right: 80px;
-}
+} */
 
 /* Icon Allignment */
 
@@ -118,39 +108,6 @@ body {
   animation: moveInRight 1.5s ease-out;
 }
 
-/* Skill Box Styling */
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  80% {
-    transform: translateX(10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-
-  80% {
-    transform: translateX(-10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
 
 .html-5 {
   margin: 45px;

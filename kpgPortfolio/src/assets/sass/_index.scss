@@ -1,0 +1,33 @@
+/***
+**
+** BreakPoints 
+**
+**
+***/
+
+$media-sm: 750px !default;
+$media-md: 960px !default;
+$media-lg: 1200px !default;
+$media-xl: 1400px !default;
+$media-xxl: 1600px !default;
+
+@import 'main';
+@import 'header';
+@import 'nav';
+@import 'btn-link.scss';
+@import 'about';
+@import 'assets';
+@import 'contact';
+@import 'portfolio';
+@import 'skills';
+
+/* Icon Allignment */
+
+@media screen and (min-width: $media-sm) {
+}
+@media screen and (min-width: $media-md) {
+}
+@media screen and (min-width: $media-lg) {
+}
+@media screen and (min-width: $media-xl) {
+}

@@ -1,0 +1,141 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(219, 51, 68, 0.8),
+      rgba(247, 23, 53, 0.8)
+    ),
+    url(../images/hero-img.jfif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.page__skills {
+  .header {
+    height: 35vh;
+    background-image: linear-gradient(
+        rgb(219, 52, 69, 0.8),
+        rgb(247, 23, 53, 0.8)
+      ),
+      url(../images/hero-img-2.jfif);
+
+    background-size: cover;
+  }
+}
+
+.header__logo-box {
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 2rem;
+  top: 60px;
+  left: 10%;
+}
+.header__logo {
+  height: 28px;
+  position: absolute;
+  top: 3.5px;
+  padding-left: 2px;
+}
+.header__text-box {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.heading-primary {
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 2.5rem;
+}
+.heading-primary--main {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 8px;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  animation: moveInLeft 1s ease-out;
+}
+.heading-primary--sub {
+  display: block;
+  color: #e3cbcb;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 8px;
+  line-height: 1.5;
+  animation: moveInRight 1s ease-out;
+}
+
+@media screen and (min-width: $media-sm) {
+}
+
+@media screen and (min-width: $media-md) {
+  .heading-primary--main {
+    font-size: 3rem;
+
+    font-weight: 400;
+  }
+  .heading-primary--sub {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  .header__logo-box {
+    font-size: 3rem;
+    top: 60px;
+    left: 80px;
+  }
+  .header__logo {
+    height: 45px;
+    position: absolute;
+    top: 3.5px;
+    padding-left: 2px;
+  }
+}
+
+@media screen and (min-width: $media-lg) {
+}
+
+@media screen and (min-width: $media-xl) {
+}
+
+@media screen and (min-width: $media-xxl) {
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

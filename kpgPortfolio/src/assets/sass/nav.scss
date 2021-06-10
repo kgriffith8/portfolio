@@ -1,0 +1,242 @@
+.navigation__button {
+  background-color: #fff;
+  border-radius: 50%;
+  position: fixed;
+  height: 2rem;
+  width: 2rem;
+  top: 1rem;
+  right: 2rem;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem #333333;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    .navigation__icon {
+      &::before {
+        top: -0.5rem;
+      }
+      &::after {
+        top: 0.5rem;
+      }
+    }
+  }
+}
+
+.navigation__background {
+  background-image: radial-gradient(#db3445, #f71735);
+  height: 2rem;
+  width: 2rem;
+  position: fixed;
+  border-radius: 50%;
+  z-index: 1000;
+  top: 1rem;
+  right: 2rem;
+  transition: transform 0.8s;
+}
+.navigation__checkbox {
+  display: none;
+  &:checked {
+    ~ {
+      .navigation__background {
+        transform: scale(80);
+      }
+      .navigation__nav {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+    + {
+      .navigation__button {
+        .navigation__icon {
+          background-color: transparent;
+          &::before {
+            top: 0;
+            transform: rotate(45deg);
+          }
+          &::after {
+            top: 0;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%;
+}
+.navigation__item {
+  margin: 1rem;
+}
+
+.navigation__link {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    #fff 50%
+  );
+  background-size: 220%;
+  transition: all 0.6s;
+  &:link {
+    font-size: 1.5rem;
+  }
+  &:visited {
+  }
+  &:hover {
+    background-position: 100%;
+    color: #db3445;
+    transform: translateX(1rem);
+  }
+  &:active {
+    background-position: 100%;
+    color: #db3445;
+    transform: translateX(1rem);
+  }
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 1rem;
+  display: inline-block;
+  width: 1.3rem;
+  height: 2px;
+  background-color: #333;
+  &::before {
+    display: inline-block;
+    width: 1.3rem;
+    height: 2px;
+    background-color: #333;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -0.3rem;
+  }
+  &::after {
+    display: inline-block;
+    width: 1.3rem;
+    height: 2px;
+    background-color: #333;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.3rem;
+  }
+}
+.navigation__socials {
+  text-align: center;
+  .navigation__social {
+    &--icon {
+      color: #fff;
+      height: 45px;
+      margin: 25px;
+      padding: 10px;
+      transition: all 0.3s;
+      &:hover {
+        border-bottom: 2px solid #fff;
+        transform: translateY(-9px);
+        height: 55px;
+      }
+    }
+  }
+  &--list {
+  }
+}
+
+@media screen and (min-width: $media-sm) {
+}
+
+@media screen and (min-width: $media-md) {
+  .navigation__link {
+    font-size: 2.3rem;
+
+    &:link {
+      font-size: 2.3rem;
+    }
+    &:visited {
+    }
+  }
+}
+
+@media screen and (min-width: $media-lg) {
+  .navigation__button {
+    height: 7rem;
+    width: 7rem;
+    top: 45px;
+    right: 90px;
+  }
+  .navigation__background {
+    height: 6rem;
+    width: 6rem;
+    top: 55px;
+    right: 90px;
+  }
+  .navigation__link {
+    font-size: 3rem;
+
+    &:link {
+      font-size: 3rem;
+    }
+    &:visited {
+    }
+  }
+  .navigation__icon {
+    margin-top: 3.5rem;
+    width: 3rem;
+    height: 2px;
+    &::before {
+      left: 0;
+      top: -0.8rem;
+    }
+    &::after {
+      width: 3rem;
+      height: 2px;
+      content: '';
+      left: 0;
+      top: 0.8rem;
+    }
+  }
+  .navigation__socials {
+    .navigation__social {
+      &--icon {
+        height: 60px;
+        margin: 25px;
+        padding: 10px;
+
+        &:hover {
+          height: 95px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $media-xl) {
+}
+
+@media screen and (min-width: $media-xxl) {
+}
