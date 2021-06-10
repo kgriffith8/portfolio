@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  /* padding: 0 30px; */
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(219, 51, 68, 0.8),
+      rgba(247, 23, 53, 0.8)
+    ),
+    url(../images/hero-img.jfif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+.header__logo-box a {
+  text-decoration: none;
+.header__logo-box {
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 3rem;
+  top: 60px;
+  left: 80px;
+.header__logo {
+  height: 45px;
+  top: 3.5px;
+  padding-left: 2px;
+.header__text-box {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+.heading-primary {
+  backface-visibility: hidden;
+.heading-primary--main {
+  display: block;
+  font-size: 45px;
+  letter-spacing: 8px;
+  line-height: 1.5;
+  animation: moveInLeft 1s ease-out;
+.heading-primary--sub {
+  font-size: 30px;
+  animation: moveInRight 1s ease-out;
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  100% {
+    opacity: 1;
+    transform: translate(0);
+@keyframes moveInRight {
+    transform: translateX(100px);
+    transform: translateX(-10px);
+.btn:link,
+.btn:visited {
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  margin: 25px;
+.btn--white {
+  background-color: #fff;
+  color: #db3445;
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.9);
+.navigation__checkbox {
+  display: none;
+.navigation__button {
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  top: 45px;
+  right: 90px;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(#111);
+  cursor: pointer;
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  top: 55px;
+  background-image: radial-gradient(#db3445, #f71735);
+  z-index: 1000;
+  transition: transform 0.8s;
+.navigation__nav {
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+.navigation__list {
+  list-style: none;
+  width: 100%;
+.navigation__item {
+  margin: 1rem;
+.navigation__link,
+.navigation__link:link,
+.navigation__link:visited {
+  font-weight: 300;
+  padding: 1rem 2rem;
+  /* background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #202020 50%); */
+    120deg,
+    transparent 0%,
+    transparent 50%,
+    #fff 50%
+  );
+  background-size: 220%;
+  transition: all 0.6s;
+.navigation__link:hover,
+.navigation__link:active {
+  background-position: 100%;
+  transform: translateX(1rem);
+/* Nav click functionality */
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80);
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+.navigation__icon {
+  margin-top: 3.5rem;
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 3rem;
+  height: 2px;
+  background-color: #333;
+  content: '';
+  left: 0;
+.navigation__icon::before {
+  top: -0.8rem;
+  top: 0.8rem;
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem;
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem;
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  transform: rotate(45deg);
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  transform: rotate(-45deg);
+.navigation__social--icon {
+  height: 86px;
+  padding: 10px;
+  transition: all 0.3s;
+.navigation__social--icon:hover {
+  border-bottom: 10px solid #fff;
+  transform: translateY(-9px);
+  height: 95px;
+.navigation__socials {
+@media (max-width: 963px) {
+  .header__logo-box {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 26px;
+    top: 80px;
+    left: 28.5px;
+  .header__logo {
+    height: 26px;
+    top: 3px;
+    padding-left: 2px;
+  .navigation__button {
+    top: 59px;
+    right: 45px;
+    max-height: 75px;
+    max-width: 75px;
+  .navigation__background {
+  .navigation__icon {
+    top: -15px;
+  .navigation-list {
+    position: relative;
+    left: 13px;
+  .navigation__item {
+    height: 45px;
+  .navigation__social--icon {
+    height: 55px;
+  .header__text-box {
+    margin-top: 27.5px;
+@media (max-width: 355px) {
+  /* background-color: #292a2b; */
+  height: 35vh;
+      rgb(219, 52, 69, 0.8),
+      rgb(247, 23, 53, 0.8)
+    url(../images/hero-img-2.jfif);
+.header__menu-container {
+  top: 40px;
+  right: 80px;
+/* Icon Allignment */
+.menu-container--img {
+  border-radius: 100%;
+  height: 80px;
+  width: 80px;
+  padding: 10px 20px;
+.icon__primary {
+  top: 35%;
+.icon__primary img {
+  height: 110px;
+.icon__secondary {
+  top: 42%;
+.icon__secondary img {
+  margin: 30px;
+.header-text {
+  top: 95px;
+  color: #f71735;
+  /* border-bottom: 2px solid black; */
+.horizontal-rule {
+  top: 100px;
+.text-container {
+  padding: 100px;
+  display: flex;
+  justify-content: space-around;
+.text__box--skill-container {
+  margin: 20px;
+  animation: moveInLeft 1.5s ease-out;
+.text-container__text-box--primary {
+  font-size: 34px;
+  font-weight: 600;
+.text-container__text-box--sub {
+  width: 400px;
+  animation: moveInRight 1.5s ease-out;
+/* Skill Box Styling */
+.html-5 {
+  margin: 45px;
+  padding: 3.5px;
+  border-top: 10px solid #fc5e03;
+  border-right: 10px solid #ff7729;
+  border-bottom: 10px solid #ff7729;
+  border-left: 10px solid #fc5e03;
+.css-3 {
+  padding: 5px;
+  border-top: 10px solid #0064fa;
+  border-right: 10px solid #5498ff;
+  border-bottom: 10px solid #5498ff;
+  border-left: 10px solid #0064fa;
+.sass {
+  border-top: 10px solid #ff52f6;
+  border-right: 10px solid #ff75f8;
+  border-bottom: 10px solid #ff75f8;
+  border-left: 10px solid #ff52f6;
+.js {
+  border: 10px solid #fff717;
+.php {
+  border-top: 10px solid #6577c9;
+  border-right: 10px solid #717fbd;
+  border-bottom: 10px solid #717fbd;
+  border-left: 10px solid #6577c9;
+.react {
+  border-top: 10px solid #3e3bf5;
+  border-right: 10px solid #ce52ff;
+  border-bottom: 10px solid #ce52ff;
+  border-left: 10px solid #3e3bf5;
+  font-size: 22px;
+  max-width: 20ch;
+  margin-top: 30px;
+.top-text {
+  margin-bottom: 35px;
+.btn-container {
+  padding: 25px 40px;
+  margin: 60px;
+  /* top: 50%; */
+  left: 5%;
+  background-color: #f71735;
+  box-shadow: rgb(0, 0, 0, 0.9);
+.navigation h3 {
+  .header-text {
+    color: #f71735;
+    margin-top: 15px;
+    top: 45px;
+    right: 25px;
+    top: 55px;
+  .icon-primary {
+    top: 25px;
+  .html-5-image {
+    display: none;
+  .css-3-image {
+  .js-image {
+  .php-image {
+  .react-image {
+  .html-5 {
+  .css-3 {
+  .sass {
+  .js {
+  .php {
+  .react {
+@media (max-width: 375px) {
+    font-size: 18px;
+    top: 95px;
+    left: 20.5px;
+    top: -3.5px;
+  .text-container__text-box--sub {
+    max-width: 100ch;
+    url(../images/hero-img-3.jfif);
+  background-position: top;
+.portfolio-container {
+  top: 135%;
+  color: #111;
+  font-size: 18px;
+.portfolio-container--heading {
+  margin: 15px;
+.portfolio-container__template-1 {
+  top: 500px;
+  margin-left: 325px;
+  padding: 30px;
+.template__top {
+  padding: 15px;
+.template__top--heading {
+  max-width: 700px;
+.template__top--code-link {
+.portfolio-image-1 {
+  right: 35px;
+.portfolio-container__template-2 {
+  top: 575px;
+.portfolio-image-2 {
+  max-width: 1024px;
+  max-height: 518px;
+.portfolio-container__template-3 {
+  top: 675px;
+.portfolio-image-3 {
+  min-height: 518px;
+  .portfolio-container {
+    top: 555px;
+  .portfolio-container__template-1 {
+    top: 800px;
+    left: -275px;
+  .portfolio-container__template-1,
+  h2 {
+    width: 100%;
+  .template__top {
+    left: -49px;
+  .template__top--heading {
+  .template__top--code-link {
+    max-width: 700px;
+  .portfolio-image-1 {
+    max-width: 400px;
+    max-height: 900px;
+  .portfolio-container__template-2 {
+    top: 845px;
+  .portfolio-container__template-2,
+  .portfolio-image-2 {
+    left: -37px;
+  .portfolio-container__template-3 {
+    top: 900px;
+  .portfolio-container__template-3,
+  .portfolio-image-3 {
+    min-height: 900px;
+  background-repeat: no-repeat;
+    url(../images/hero-img-5.jfif);
+/* Reused Assets End Here */
+.form-container {
+form {
+input[type='text'] {
+  margin: 25px auto;
+  border-radius: 10px;
+  width: 235px;
+  height: 50px;
+textarea {
+  margin: 15px auto;
+.form-container__button {
+  height: 65px;
+  border: none;
+/*  -----------------
+    Universal Assets: 
+    - * selector
+    - Body properties
+    -----------------  */
+/*  -----------------------
+  Header Assets:
+  - Logo text + logo image
+  -----------------------  */
+  height: X;
+    url(X);
+/*  ----------------------
+  Button Assets
+  - Button styling
+  - Button hover effects
+  ----------------------  */
+/*  ------------------------------------------------------------
+  Navigation Assets
+  - Navigation checkbox positioning
+  - Navigation "active" animation
+  - Navigation directory, social media icons, copyright footer
+  ------------------------------------------------------------  */
+    url(../images/hero-img-4.jfif);
+.about-container {
+  align-items: center;
+  top: 240px;
+  padding: 20px;
+.about-container__heading {
+  margin: 10px;
+.about-container--paragraph {
+  top: 27.5px;
+  margin: 17px;
+.about-container--paragraph--end {
+.about-container__left-column {
+  left: 40px;
+  font-size: 17px;
+.left-column__socials {
+  /* padding: 20px; */
+.social {
+  padding: 25px;
+  height: 100px;
+.nashville {
+  height: 800px;
+  top: 170px;
+@media (max-width: 960px) {
+  .about-container__heading {
+    padding-top: 25px;
+  .nashville {
+    padding-top: 45px;
+  .about-container__left-column {
+    text-align: center;
+    margin-right: 62.5px;
+  .about-container--paragraph {
+    max-width: 110ch;
+  .social {
+    height: 155px;
+    height: 85px;
